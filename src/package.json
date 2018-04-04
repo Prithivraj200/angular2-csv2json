@@ -1,0 +1,34 @@
+{
+  "name": "angular2-csv2json",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prithivraj200/angular2-csv2json.git"
+  },
+  "author": {
+    "name": "Prithivraj200",
+    "email": "prethive200@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "csv to json",
+    "csv2json",
+    "angular2 csv",    
+    "angular2 json",
+    "angular2 csv2json",
+    "angular2 csv to json",  
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prithivraj200/angular2-csv2json.git/issues"
+  },
+  "main": "angular2-csv2json.umd.js",
+  "module": "angular2-csv2json.js",
+  "jsnext:main": "angular2-csv2json.js",
+  "typings": "angular2-csv2json.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
