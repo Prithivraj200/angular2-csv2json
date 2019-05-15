@@ -26,7 +26,7 @@ import { CSV2JSONModule } from 'angular2-csv2json';
   <csv2json 
      [btnText]="'custom text in button. '"
      [errorMsg]="'custom error msg'"
-     (response)=onUpload($event)
+     (response)='onUpload($event)'
   ></csv2json>
   ```
 
@@ -36,8 +36,8 @@ import { CSV2JSONModule } from 'angular2-csv2json';
 > in your .ts,  
 
   ```
-  onUpload(event: {type: string, data: any}){
-    if (type === 'success) {
+  onUpload(event: {type: string, data: any}) {
+    if (event.type === 'success') {
       console.log(event.data);
     } else { 
       console.log(event.data); // error
