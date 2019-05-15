@@ -31,13 +31,13 @@ in your .html,
 
 in your .ts,  
 
-  onUpload(event: {type: string, data: any}){ <br /> 
-    if (type === 'success) {<br /> 
-      console.log(event.data);<br /> 
-    } else {<br /> 
-      console.log(event.data); // error<br /> 
-    }<br />
-  }<br />
+  onUpload(event: {type: string, data: any}){
+    if (type === 'success) {
+      console.log(event.data);
+    } else { 
+      console.log(event.data); // error
+    }
+  }
 
 ## License
 
