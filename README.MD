@@ -20,13 +20,24 @@ Then import it into your @NgModule
 
 in your .html,
  
-  <csv2json (jsonData)=showJSON($event)></csv2json>
+  <csv2json 
+     [btnText]="'custom text in button'"
+     [errorMsg]="'custom error msg'"
+     (response)=onUpload($event)
+  ></csv2json>
+
+  Default btnText is 'Upload'.
+  Default errorMsg is 'Invalid format. Please upload only csv files..';
 
 in your .ts,  
 
-  showJSON(e){ <br /> 
-    console.log(e); <br />
-  }
+  onUpload(event: {type: string, data: any}){ <br /> 
+    if (type === 'success) {<br /> 
+      console.log(event.data);<br /> 
+    } else {<br /> 
+      console.log(event.data); // error<br /> 
+    }<br />
+  }<br />
 
 ## License
 
