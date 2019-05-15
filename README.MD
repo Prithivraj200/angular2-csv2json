@@ -1,7 +1,7 @@
 # angular2-csv2json
 
 # Installation
-npm i angular2-csv2json --save
+`npm i angular2-csv2json --save`
 
 # Usage
 
