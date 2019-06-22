@@ -17,16 +17,21 @@ export class Csv2JsonComponent {
   @Input() btnText: string;
   @Input() errorMsg: string;
   @Output() response: EventEmitter<any> = new EventEmitter<any>();
+  allowedFormat: Array<string>;
 
   constructor() {
     this.btnText = 'Upload';
     this.errorMsg = 'Invalid format. Please upload only csv files..';
+    this.allowedFormat = [
+      'text/csv',
+      'application/vnd.ms-excel'
+    ];
   }
 
   async getFiles(e) {
     try {
       const file = e.target.files[0];
-      if (file.type !== 'text/csv') {
+      if (!this.allowedFormat.includes(file.type)) {
         this.file.nativeElement.value = '';
         this.response.emit({type: 'error', data: this.errorMsg});
         return;
